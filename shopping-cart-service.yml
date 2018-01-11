@@ -48,13 +48,13 @@ spring:
     database: MYSQL
     generate-ddl: true
   datasource:
-    url: jdbc:mysql://${DOCKER_IP:192.168.99.100}:3306/dev
+    url: jdbc:mysql://localhost:3306/dev
     username: root
     password: dbpass
 security:
   oauth2:
     resource:
-      userInfoUri: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user
+      userInfoUri: http://localhost:8181/uaa/user
     client:
       client-id: acme
   enable-csrf: false
@@ -65,7 +65,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${DOCKER_IP:192.168.99.100}:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 ---
 spring:
   application:
