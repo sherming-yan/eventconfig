@@ -43,7 +43,7 @@ spring:
   profiles: docker
   data:
     mongodb:
-      host: mongo
+      host: 192.168.106.88
       port: 27017
   mvc:
     date-format: "YYYY-MM-dd"
